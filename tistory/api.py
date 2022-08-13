@@ -1,4 +1,8 @@
+import time
 import requests
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 class Tistory:
     """
@@ -223,3 +227,48 @@ class Tistory:
             params[k] = v
         res = requests.post(url, data=params)
         return res.json()
+
+
+class Auto:
+    """
+    티스토리 자동화 클래스
+    """
+    def __init__(self, kakao_id, kakao_pw, driver_path):
+        """
+        설정
+        - kakao_id: 카카오 이메일
+        - kakao_pw: 카카오 비밀번호
+        - driver_path: 크롬 드라이버 경로
+        """
+        self.kakao_id = kakao_id
+        self.kakao_pw = kakao_pw
+        self.driver_path = driver_path
+        self.options = webdriver.ChromeOptions()
+        self.options.add_argument("headless")
+
+    def get_access_token(self, authentication_url):
+        """
+        Access Token 조회
+        - authentication_url: 인증 URL
+        """
+        # 크롬 드라이버 정의
+        self.driver = webdriver.Chrome(self.driver_path, options=self.options)
+        # 티스토리 로그인 페이지 접속
+        self.driver.get(authentication_url)
+        self.driver.implicitly_wait(10)
+        self.driver.find_element(By.XPATH, """//*[@id="cMain"]/div/div/div/a[1]""").send_keys(Keys.ENTER)
+        time.sleep(1)
+        self.driver.find_element(By.XPATH, """//*[@id="id_email_2"]""").send_keys(self.kakao_id)
+        time.sleep(1)
+        self.driver.find_element(By.XPATH, """//*[@id="id_password_3"]""").send_keys(self.kakao_pw)
+        time.sleep(1)
+        self.driver.find_element(By.XPATH, """//*[@id="login-form"]/fieldset/div[8]/button[1]""").send_keys(Keys.ENTER)
+        time.sleep(1)
+        self.driver.find_element(By.XPATH, """//*[@id="contents"]/div[4]/button[1]""").send_keys(Keys.ENTER)
+        time.sleep(1)
+        current_url = self.driver.current_url
+        authentication_code = current_url.split("code=")[1].split("&state=")[0]
+        # 크롬 드라이버 종료
+        self.driver.quit()
+        return authentication_code
+        
