@@ -1,6 +1,6 @@
 # tistory
 
-[![PyPI Latest Release](https://img.shields.io/pypi/v/pykakao.svg)](https://pypi.org/project/pykakao/)
+[![PyPI Latest Release](https://img.shields.io/pypi/v/tistory.svg)](https://pypi.org/project/tistory/)
 ![](https://img.shields.io/badge/python-3.8-blue.svg)
 ![](https://img.shields.io/badge/requests-2.28.1-red.svg)
 ![](https://img.shields.io/badge/api-tistory-green.svg)
