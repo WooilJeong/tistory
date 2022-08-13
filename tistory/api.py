@@ -91,7 +91,7 @@ class Tistory:
         }
         for k, v in kwargs.items():
             params[k] = v
-        res = requests.post(url, params=params)
+        res = requests.post(url, data=params)
         return res.json()
 
 
@@ -117,7 +117,7 @@ class Tistory:
         }
         for k, v in kwargs.items():
             params[k] = v
-        res = requests.post(url, params=params)
+        res = requests.post(url, data=params)
         return res.json()
 
 
@@ -133,7 +133,7 @@ class Tistory:
             "uploadedfile": uploadedfile,
             "output": "json",
         }
-        res = requests.post(url, params=params)
+        res = requests.post(url, data=params)
         return res.json()
 
 
@@ -182,7 +182,7 @@ class Tistory:
         }
         for k, v in kwargs.items():
             params[k] = v
-        res = requests.post(url, params=params)
+        res = requests.post(url, data=params)
         return res.json()
 
 
@@ -203,7 +203,7 @@ class Tistory:
         }
         for k, v in kwargs.items():
             params[k] = v
-        res = requests.post(url, params=params)
+        res = requests.post(url, data=params)
         return res.json()
 
 
@@ -221,5 +221,5 @@ class Tistory:
         }
         for k, v in kwargs.items():
             params[k] = v
-        res = requests.post(url, params=params)
+        res = requests.post(url, data=params)
         return res.json()
