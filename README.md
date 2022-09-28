@@ -34,6 +34,11 @@ pip install tistory
 ```
 
 
+## 사용 설명서
+
+- [Python tistory 패키지로 블로그 자동화하기](https://wooiljeong.github.io/python/tistory)
+
+
 ## 참조
 
 - [티스토리 오픈 API 신청](https://www.tistory.com/guide/api/manage/register)
