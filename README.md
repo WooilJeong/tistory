@@ -1,40 +1,33 @@
-# tistory
+<div align="center">
+
+<b>티스토리 블로그 자동화를 위한 오픈소스 파이썬 라이브러리</b><br>
+<b>🚀`pip install tistory --upgrade`</b>
+
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/tistory.svg)](https://pypi.org/project/tistory/)
 ![](https://img.shields.io/badge/python-3.8-blue.svg)
 ![](https://img.shields.io/badge/requests-2.28.1-red.svg)
 ![](https://img.shields.io/badge/selenium-4.4.0-yellow.svg)
-![](https://img.shields.io/badge/api-tistory-green.svg)
+![](https://img.shields.io/badge/API-TISTORY-green.svg)
+
+<br>
+
+<div align="left">
 
 
-## 기여자
+## tistory
 
-<div align="center">
-    <table>
-    <tr>
-        <td align="center">
-            <a href="https://github.com/wooiljeong">
-            <img src="https://avatars.githubusercontent.com/u/38076110?v=4" width="100px;" alt=""/><br />
-            <sub><b>정우일</b></sub></a><br />
-        </td>
-    </tr>
-    </table>
-</div>
+**tistory**는 티스토리 블로그 자동화를 위한 오픈소스 파이썬 라이브러리입니다. 티스토리에서 제공하는 Open API를 Python으로 쉽게 이용할 수 있습니다.
 
 
-## 소개
-
-tistory는 티스토리 블로그 오픈 API를 파이썬으로 쉽게 이용할 수 있도록 돕는 오픈소스 라이브러리입니다. 
-
-
-## 설치
+## 설치 방법
 
 ```bash
 pip install tistory
 ```
 
 
-## 사용 설명서
+## 사용 방법
 
 - [Python tistory 패키지로 블로그 자동화하기](https://wooiljeong.github.io/python/tistory)
 
@@ -44,6 +37,13 @@ pip install tistory
 - [티스토리 오픈 API 신청](https://www.tistory.com/guide/api/manage/register)
 - [티스토리 오픈 API 가이드](https://tistory.github.io/document-tistory-apis/)
 
+## 기여자
+
+<a href="https://github.com/wooiljeong/pynaver/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wooiljeong/pynaver" />
+</a>
+
+<br>
 
 <div align=center>
 
